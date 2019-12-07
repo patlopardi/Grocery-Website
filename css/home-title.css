@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
+}
+
+.home-title {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: JosefinSans-Bold;
+    font-size: 70px;
+    color: #57b846;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
+}
+
+.lower-home-title {
+    color: black;
+}

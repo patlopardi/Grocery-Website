@@ -1,0 +1,193 @@
+    /* Nav Bar CSS */
+    
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo-left {
+        display: flex;
+    }
+    
+    #header-img {
+        width: 250px;
+    }
+    
+    .profile-logo {
+        width: 70px;
+    }
+    
+    .cart-logo {
+        width: 80px;
+    }
+    
+    .logo-burger a {
+        float: none;
+        color: white;
+        padding: 14px 20px;
+        margin-top: 19px;
+        font-size: 30px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .nav-links {
+        list-style: none;
+    }
+    
+    .link img {
+        float: none;
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .link:hover {
+        background-color: #57b846;
+    }
+    
+    .link:hover a {
+        color: #144591;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        background-color: #ffffff;
+        padding-left: 30px;
+        padding-right: 40px;
+        border-bottom: 10px solid #57b846;
+        z-index: 20;
+    }
+    
+    .nav-links {
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 25px;
+    }
+    
+    .logo img {
+        width: 90px;
+        vertical-align: middle;
+    }
+    /* Navbar container */
+    
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        z-index: 20;
+    }
+    /* Dropdown button */
+    
+    .dropdown .dropbtn {
+        font-size: 25px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 25px;
+        background-color: inherit;
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+        margin: 0;
+        /* Important for vertical align on mobile phones */
+    }
+    /* Add a red background color to navbar links on hover */
+    
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: #CDCECF;
+        color: #1B2C58;
+    }
+    /* Dropdown content (hidden by default) */
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    /* Links inside the dropdown */
+    
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    /* Add a grey background color to dropdown links on hover */
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    /* Show the dropdown menu on hover */
+    
+    .logo-burger {
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    @media screen and (max-width: 1025px) {
+        .link:not(:last-child) {
+            display: none;
+        }
+        .logo-burger {
+            display: unset;
+        }
+        .nav-links {
+            margin: 0;
+        }
+    }
+    
+    @media screen and (max-width: 1025px) {
+        .navbar {
+            float: right;
+            display: block;
+        }
+        .nav-links.responsive {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin: 0px;
+        }
+        .nav-links.responsive .link {
+            display: unset;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        .logo p {
+            margin-top: 29px;
+            font-size: 17px;
+            margin-bottom: 19px;
+            padding-left: 20px;
+            color: white;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #1B2C58;
+            padding-left: 30px;
+            padding-right: 40px;
+            border-bottom: 10px solid rgb(205, 206, 207, .9);
+        }
+        a.icon {
+            margin-top: 20px;
+            margin-right: -20px;
+        }
+    }
+    /****************** END of Navbar CSS ******************/
