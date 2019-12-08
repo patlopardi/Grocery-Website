@@ -1,5 +1,10 @@
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
+}
+
 html,
 html a {
     -webkit-font-smoothing: antialiased;
@@ -92,6 +97,10 @@ main {
     overflow: hidden;
     padding: 1rem 0;
     width: 960px;
+    color: black;
+    font-family: JosefinSans-Bold;
+    font-size: 13px;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
 
 .basket,
@@ -113,14 +122,19 @@ aside {
 label {
     display: block;
     margin-bottom: 0.3125rem;
+    font-family: JosefinSans-Bold;
+    font-size: 25px;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
 
 .promo-code-field {
     border: 1px solid #ccc;
     padding: 0.5rem;
+    border-radius: 30px;
     text-transform: uppercase;
     transition: all 0.2s linear;
     width: 48%;
+    margin-top: 5px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -137,6 +151,10 @@ label {
     font-size: 0.625rem;
     margin-left: 0.625rem;
     padding: 0.6875rem 1.25rem 0.625rem;
+    background-color: #57b846;
+    font-family: JosefinSans-Bold;
+    font-size: 15px;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
 
 .basket-labels {
@@ -154,7 +172,6 @@ ul {
 li {
     color: #111;
     display: inline-block;
-    padding: 0.625rem 0;
 }
 
 li.price:before,
@@ -187,7 +204,7 @@ li.subtotal:before {
 
 .remove button {
     background-color: transparent;
-    color: #777;
+    color: #57b846;
     float: none;
     text-decoration: underline;
     text-transform: uppercase;
@@ -241,9 +258,11 @@ aside {
 }
 
 .summary {
-    background-color: #eee;
+    background-color: #57b846;
     border: 1px solid #aaa;
     padding: 1rem;
+    margin-top: 90px;
+    border-radius: 10px;
     position: fixed;
     width: 250px;
     -webkit-box-sizing: border-box;
@@ -253,14 +272,15 @@ aside {
 
 .summary-total-items {
     color: #666;
-    font-size: 0.875rem;
+    font-size: 1.375rem;
     text-align: center;
+    color: white;
 }
 
 .summary-subtotal,
 .summary-total {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
     clear: both;
     margin: 1rem 0;
     overflow: hidden;
@@ -273,7 +293,7 @@ aside {
 .total-value,
 .promo-title,
 .promo-value {
-    color: #111;
+    color: white;
     float: left;
     width: 50%;
 }
@@ -321,8 +341,14 @@ aside {
     font-size: 0.75rem;
     text-align: center;
     text-transform: uppercase;
-    padding: 0.625rem 0;
+    padding: 0.615rem 0;
     width: 100%;
+    color: #57b846;
+    background-color: white;
+    border-radius: 30px;
+    font-family: JosefinSans-Bold;
+    font-size: 13px;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
 
 .summary-delivery-selection {
@@ -400,4 +426,15 @@ aside {
     .product-details {
         padding: 0 1rem;
     }
+}
+
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top-logo img {
+    width: 300px;
 }
