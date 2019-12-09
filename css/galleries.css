@@ -1,139 +1,156 @@
-    #myInput {
-        border-radius: 30px;
-        background-image: url('/css/searchicon.png');
-        /* Add a search icon to input */
-        background-position: 10px 12px;
-        /* Position the search icon */
-        background-repeat: no-repeat;
-        /* Do not repeat the icon image */
-        width: 500px;
-        /* Full-width */
-        font-size: 16px;
-        /* Increase font-size */
-        padding: 12px 20px 12px 40px;
-        /* Add some padding */
-        border: 1px solid #ddd;
-        /* Add a grey border */
-        margin-bottom: 12px;
-        /* Add some space below the input */
-    }
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
+}
+
+#myInput {
+    border-radius: 30px;
+    background-image: url('/css/searchicon.png');
+    /* Add a search icon to input */
+    background-position: 10px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 500px;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     
-    #myUL {
-        /* Remove default list styling */
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto;
-        grid-gap: 50px;
-        padding: 50px 200px 0px 200px;
+    grid-gap: 50px;
+    padding: 50px 200px 0px 200px;
+}
+
+.padding {
+    padding-top: 120px;
+}
+
+.search-container {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container img {
+    width: 30px;
+    margin: 0px 20px 10px 0px;
+}
+
+.gallery-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    height: 275px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245, .8);
+    font-family: JosefinSans-Bold;
+    font-size: 50px;
+    color: #57b846;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
+}
+
+.gallery-link img {
+    width: 200px;
+}
+
+.bottom-gallery-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 225px;
+}
+
+.bottom-gallery-link img {
+    width: 50px;
+    transition: 0.5s;
+}
+
+.bottom-gallery-link img:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+@-webkit-keyframes hvr-icon-up {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
+    25%,
+    75% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-icon-up {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25%,
+    75% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+
+/* Icon Up */
+
+.hvr-icon-up {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-icon-up .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.hvr-icon-up:hover .hvr-icon,
+.hvr-icon-up:focus .hvr-icon,
+.hvr-icon-up:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.form-btn{
+    border:none;
+    background-color: rgb(245, 245, 245, .8);
+}
+
+@media screen and (max-width: 1444px) {
     
-    .padding {
-        padding-top: 120px;
-    }
-    
-    .search-container {
-        width: 100%;
-    }
-    
-    .search-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .search-container img {
-        width: 30px;
-        margin: 0px 20px 10px 0px;
-    }
-    
-    .gallery-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        padding: 30px;
-        height: 275px;
-        width: 275px;
-        border-radius: 10px;
-        background-color: rgb(245, 245, 245, .8);
-        font-family: JosefinSans-Bold;
-        font-size: 50px;
-        color: #57b846;
-        src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
-    }
-    
-    .gallery-link img {
-        width: 200px;
-    }
-    
-    .bottom-gallery-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 225px;
-    }
-    
-    .bottom-gallery-link img {
-        width: 50px;
-        transition: 0.5s;
-    }
-    
-    .bottom-gallery-link img:hover {
-        transform: rotate(0deg) skew(0deg) translate(0, -10px);
-    }
-    
-    @-webkit-keyframes hvr-icon-up {
-        0%,
-        50%,
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        25%,
-        75% {
-            -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-        }
-    }
-    
-    @keyframes hvr-icon-up {
-        0%,
-        50%,
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        25%,
-        75% {
-            -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-        }
-    }
-    /* Icon Up */
-    
-    .hvr-icon-up {
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    }
-    
-    .hvr-icon-up .hvr-icon {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-    }
-    
-    .hvr-icon-up:hover .hvr-icon,
-    .hvr-icon-up:focus .hvr-icon,
-    .hvr-icon-up:active .hvr-icon {
-        -webkit-animation-name: hvr-icon-up;
-        animation-name: hvr-icon-up;
-        -webkit-animation-duration: 0.75s;
-        animation-duration: 0.75s;
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
+  }
+

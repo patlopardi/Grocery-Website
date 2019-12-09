@@ -1,5 +1,9 @@
     /* Nav Bar CSS */
     
+    .padding-nav {
+        padding-top: 150px;
+    }
+    
     .logo {
         display: flex;
         justify-content: space-between;
@@ -72,7 +76,8 @@
         padding-left: 30px;
         padding-right: 40px;
         border-bottom: 10px solid #57b846;
-        z-index: 20;
+        z-index: 10;
+        margin-right: 500px;
     }
     
     .nav-links {
@@ -149,54 +154,3 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
-    
-    @media screen and (max-width: 1025px) {
-        .link:not(:last-child) {
-            display: none;
-        }
-        .logo-burger {
-            display: unset;
-        }
-        .nav-links {
-            margin: 0;
-        }
-    }
-    
-    @media screen and (max-width: 1025px) {
-        .navbar {
-            float: right;
-            display: block;
-        }
-        .nav-links.responsive {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-            margin: 0px;
-        }
-        .nav-links.responsive .link {
-            display: unset;
-        }
-    }
-    
-    @media screen and (max-width: 400px) {
-        .logo p {
-            margin-top: 29px;
-            font-size: 17px;
-            margin-bottom: 19px;
-            padding-left: 20px;
-            color: white;
-        }
-        .navbar {
-            width: 100%;
-            background-color: #1B2C58;
-            padding-left: 30px;
-            padding-right: 40px;
-            border-bottom: 10px solid rgb(205, 206, 207, .9);
-        }
-        a.icon {
-            margin-top: 20px;
-            margin-right: -20px;
-        }
-    }
-    /****************** END of Navbar CSS ******************/
