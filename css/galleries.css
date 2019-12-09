@@ -5,7 +5,6 @@
 
 #myInput {
     border-radius: 30px;
-    background-image: url('/css/searchicon.png');
     /* Add a search icon to input */
     background-position: 10px 12px;
     /* Position the search icon */
@@ -30,7 +29,6 @@
     margin: 0;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    
     grid-gap: 50px;
     padding: 50px 200px 0px 200px;
 }
@@ -96,6 +94,7 @@
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        <<<<<<< HEAD
     }
     25%,
     75% {
@@ -145,12 +144,72 @@
     animation-timing-function: ease-out;
 }
 
-.form-btn{
-    border:none;
+.form-btn {
+    border: none;
     background-color: rgb(245, 245, 245, .8);
 }
 
 @media screen and (max-width: 1444px) {
-    
-  }
+    =======
+}
 
+25%,
+75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+
+}
+@keyframes hvr-icon-up {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    25%,
+    75% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+/* Icon Up */
+.hvr-icon-up {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-up .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.hvr-icon-up:hover .hvr-icon,
+.hvr-icon-up:focus .hvr-icon,
+.hvr-icon-up:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@media screen and (max-width: 1444px) {
+    #myUL {
+        grid-template-columns: auto auto auto;
+    }
+    
+    .padding {
+        padding: 50000px;
+    }
+    
+    .gallery-link {
+        background-color: ;
+    }
+    
+    >>>>>>>df955694be817967eb7db4de3665a8c0a04c1283
+}
