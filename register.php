@@ -19,14 +19,15 @@
         if(strcmp($validate, "") == 0){
             $_SESSION["errorFlag"] = 1;
             $errorMsg = "Registered Successfully";
-            $query = "INSERT INTO ". $db . " (Email, Password)
+            $sql = "INSERT INTO ". $db . " (Email, Password)
             VALUES (  '". $_SESSION['email'] . "', '" . $_SESSION['password'] ."')";
-            if (db_query($conn, $query)) {
+            if (db_query($conn, $sql)) {
                 //echo "New record created successfully";
-                header("Location: index.php");
+                $_SESSION["user"]["Email"] = $_SESSION['email'];
+                header("Location: profile.php");
             } else {
-                $errorMsg = "Error: " . $query . "<br>" . db_error($conn);
-              }
+                $errorMsg = "Error: " . $sql . "<br>" . db_error($conn);
+            }
         }
         else {
             $errorMsg = $validate;

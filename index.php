@@ -1,9 +1,27 @@
 <?php
     include_once("dbSetup.php");
+    if(isLoggedIn()){
+        $validatedUser = validateUserInfo($conn, $query, $_SESSION["email"], $_SESSION["password"]);
+        $_SESSION["user"] = $validatedUser;
+        $personDirect = '"profile.php"';
+        $checkoutDirect = checkForBilling();
+        $bakeryDirect = '"bakery.php"';
+        $fruitsDirect = '"fruit.php"';
+        $veggiesDirect = '"veggies.php"';
+        $deliDirect = '"deli.php"';
+    }
+    else{
+        $personDirect = "'login.php'";
+        $checkoutDirect = '"login.php"';
+        $bakeryDirect = '"login.php"';
+        $fruitsDirect = '"login.php"';
+        $veggiesDirect = '"login.php"';
+        $deliDirect = '"login.php"';
+    }
 ?>
 
 <!DOCTYPE html>
-<!----------------------------blah-------------------------------->
+<!----------------------------PROJECT-------------------------------->
 <html>
 
 <head>
@@ -33,13 +51,12 @@
     </div>
 
 
-
     <ul class="nav-links" id="linkChange">
         <li class="link">
-            <a href="login.php"> <img class="profile-logo" src="assets/profile.png"> </a>
+            <a href=<?php echo($personDirect); ?> class="profile-logo-float"> <img src="assets/profile.png"> </a>
         </li>
         <li class="link">
-            <img class="cart-logo" src="assets/cart1.png">
+            <a href=<?php echo($checkoutDirect); ?>> <img class="cart-logo" src="assets/cart1.png"></a>
         </li>
     </ul>
 </nav>
@@ -52,16 +69,16 @@
 
 <section class="catagories">
     <ul class="cata-list">
-        <a href="">
-            <li class="cata-link">breads<img src="assets/food/bread/pie.png" alt=""></li>
+        <a href=<?php echo($bakeryDirect); ?>>
+            <li class="cata-link">bakery<img src="assets/food/bread/pie.png" alt=""></li>
         </a>
-        <a href="">
-            <li class="cata-link">fruit<img src="assets/food/fruit/apple1.png" alt=""></li>
+        <a href=<?php echo($fruitsDirect); ?>>
+            <li class="cata-link">fruits<img src="assets/food/fruit/apple1.png" alt=""></li>
         </a>
-        <a href="">
+        <a href=<?php echo($veggiesDirect); ?>>
             <li class="cata-link">veggies<img src="assets/food/veggies/carrot.png" alt=""></li>
         </a>
-        <a href="">
+        <a href=<?php echo($deliDirect); ?>>
             <li class="cata-link">meats<img src="assets/food/meat/tbone.png" alt=""></li>
         </a>
     </ul>
@@ -75,4 +92,5 @@
 </body>
 </main>
 
+</html>
 </html>
