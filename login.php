@@ -19,7 +19,7 @@
     //user has been validated
     if($validatedUser != null ){
        $_SESSION["user"] = $validatedUser;
-       header("Location: index.php");
+       header("Location: profile.php");
     }
 
     else{

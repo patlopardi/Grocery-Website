@@ -11,7 +11,7 @@
         $checkoutDirect = checkForBilling();
         $orders = orderHistory($email);
         $numActive = activeOrders($orders);
-        $stringArrivals;
+        $stringArrivals = "";
         if(isset($_SESSION["Arrival"])){
             for($i = 0; $i<$numActive; $i++){
                 $stringArrivals.="ETA: ". $_SESSION["Arrival"][$i] . "<br>";
@@ -122,11 +122,13 @@
     <!-- //main-head -->
 
     <div class="wrap-all-the-things">
-        <img style="position:absolute" src="/grocery.jpg" alt="">
-        <div class="pro-container">
-            <p>Welcome <?php echo($email);?>,</p>
-            <p>You currently have <?php echo($numActive);?> active orders</p>
-            <p><?php echo($stringArrivals);?></p>
+        
+        <div class="pro-container" style="margin-top:60px;">
+            <p>Welcome <?php echo($email);?></p>:
+            <div style="border-radius:50px; border: solid 3px black; margin:100px; padding:50;">
+            <p >You currently have <?php echo($numActive);?> active orders</p>
+            <p style="padding-top:10px"><?php if(isset($stringArrivals)){echo($stringArrivals);}?></p>
+            </div>
             <p style="margin-bottom:500px;">You have 7 days until your next coupon</p>
             <button></button>
         </div>
