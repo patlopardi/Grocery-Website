@@ -1,265 +1,196 @@
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
 @font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf');
+    font-family: JosefinSans-Bold;
+    src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
 }
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body{
+    overflow: auto;
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-
-
-body,
-html {
-    height: 100%;
-    font-family: sans-serif;
+ .hide {
+	 display: none;
 }
-
-
-/* ------------------------------------ */
-
-a {
-    margin: 0px;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
+ .head-nav li:hover {
+	 background-color: white;
 }
-
-a:focus {
-    outline: none !important;
+ .head-nav li:hover:before {
+	 background-color: white;
 }
-
-a:hover {
-    text-decoration: none;
+ .head-nav li:hover svg {
+	 background: white;
+	 fill: #57b846;
 }
-
-
-/* ------------------------------------ */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0px;
+ .head-nav li:hover a {
+	 color: #57b846;
 }
-
-
-ul,
-li {
-    margin: 0px;
-    list-style-type: none;
+ .head-nav li:before {
+	 position: absolute;
+	 left: -0.925rem;
+	 top: 0;
+	 width: 0.925rem;
+	 height: 100%;
+	 content: "";
+	 background: #57b846;
+	 z-index: 1;
+	 transition: background 400ms;
 }
-
-
-/* ------------------------------------ */
-
-input {
-    display: block;
-    outline: none;
-    border: none !important;
+ .head-nav ul {
+	 margin-top: 1.85rem;
+	 margin-right: 0;
+	 margin-bottom: 0;
+	 margin-left: 0;
+	 padding: 0;
+	 list-style: none;
 }
-
-textarea {
-    display: block;
-    outline: none;
+ .head-nav li {
+	 position: relative;
+	 clear: both;
+	 width: 100%;
+	 padding: 0;
+	 transition: background 400ms;
 }
-
-textarea:focus,
-input:focus {
-    border-color: transparent !important;
+ .head-nav li a {
+	 display: flex;
+	 padding-top: 2vh;
+	 padding-bottom: 2vh;
 }
+.head-nav li a span {
+	display: flex;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	font-family: JosefinSans-Bold;
+	font-size: 40px;
+	src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 
-
-/* ------------------------------------ */
-
-button {
-    outline: none !important;
-    border: none;
-    background: transparent;
 }
-
-button:hover {
-    cursor: pointer;
+.head-nav li a img{
+    width:50px;
+    margin-right: 40px;
+    margin-left:15px;
 }
-
-iframe {
-    border: none !important;
+.logout{
+    margin-left: 25px;
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Table ]*/
-
-.limiter {
-    width: 100%;
-    margin: 0 auto;
+ .head-nav a {
+	 align-items: center;
+	 width: 100%;
+	 color: #fefefe;
+	 text-decoration: none;
+	 transition: color 400ms;
 }
-
-.container-table100 {
-    padding-top: 150px;
-    width: 100%;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
+ .head-nav a span {
+	 position: relative;
+	 display: block;
+	 z-index: 0;
+	 font-family: Roboto;
+	 text-indent: -20em;
+	 white-space: nowrap;
+	 transition: text-indent 400ms ease-in-out;
+}
+ .head-nav svg {
+	 position: relative;
+	 max-width: 80px;
+	 max-height: 30px;
+	 z-index: 1;
+	 fill: #fefefe;
+	 background: #57b846;
+	 transition: 400ms;
+}
+ @media screen and (max: 768px) {
+	 .head-nav ul {
+		 margin-top: 0.23125rem;
+	}
+	 .head-nav svg {
+		 max-width: 20px;
+	}
+}
+ .main-head {
+     font-family: JosefinSans-Bold;
+    font-size: 30px;
+     position: fixed;
+     padding-bottom: 100px;
+	 bottom: 0;
+	 width: 83px;
+     height: 90%;
+	 z-index: 1;
+	 background: #57b846;
+	 transition: width 400ms;
+}
+ .main-head:hover {
+	 width: 436px;
+}
+ .main-head:hover + .wrap-all-the-things {
+	 transform: translateX(336px);
+	 max-width: 100%;
+	 opacity: 0.4;
+}
+ .main-head:hover .head-nav li:nth-of-type(1) span {
+	 transition-delay: 100ms;
+}
+ .main-head:hover .head-nav li:nth-of-type(2) span {
+	 transition-delay: 200ms;
+}
+ .main-head:hover .head-nav li:nth-of-type(3) span {
+	 transition-delay: 300ms;
+}
+ .main-head:hover .head-nav li:nth-of-type(4) span {
+	 transition-delay: 400ms;
+}
+ .main-head:hover .head-nav span {
+	 text-indent: 0;
+}
+ @media screen and (max: 768px) {
+	 .main-head {
+		 width: 70px;
+		 padding: 0 0.925rem;
+	}
+	 .main-head .head-nav {
+		 padding-left: 7px;
+	}
+	 .main-head:hover .head-nav span {
+		 text-indent: 1em;
+	}
+}
+ .wrap-all-the-things {
+	min-height: 100%;
+	margin-top: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 33px 30px;
-}
+    align-items: center;
+    flex-direction: column;
+	background-size: cover;
+	background-position: center center;
+    transition: transform 400ms, opacity 400ms;
 
-.wrap-table100 {
-    width: 960px;
-    border-radius: 10px;
-    overflow: hidden;
 }
-
-.table {
+.wrap-all-the-things img{
     width: 100%;
-    border: 5px solid #ddd;
-    display: table;
-    margin: 0;
+    height: 100%;
+    position: absolute;
+
+    opacity: .3;
+}
+.wrap-all-the-things p{
+
+    font-family: JosefinSans-Bold;
+    font-size: 50px;
+    color: black;
+    opacity: 1;
+    z-index: 1;
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
+}
+ @media screen and (max: 480px) {
+	 .wrap-all-the-things {
+		 padding-left: 70px;
+	}
+}
+.padding-profile{
+    padding-top:100px;
 }
 
-@media screen and (max-width: 768px) {
-    .table {
-        display: block;
-    }
-}
-
-.row {
-    display: table-row;
-    background: #fff;
-}
-
-.row.header {
-    color: #ffffff;
-    background: #57b846;
-}
-
-@media screen and (max-width: 768px) {
-    .row {
-        display: block;
-    }
-    .row.header {
-        padding: 0;
-        height: 0px;
-    }
-    .row.header .cell {
-        display: none;
-    }
-    .row .cell:before {
-        font-family: Poppins-Bold;
-        font-size: 12px;
-        color: #808080;
-        line-height: 1.2;
-        text-transform: uppercase;
-        font-weight: unset !important;
-        margin-bottom: 13px;
-        content: attr(data-title);
-        min-width: 98px;
-        display: block;
-    }
-}
-
-.cell {
-    display: table-cell;
-}
-
-@media screen and (max-width: 768px) {
-    .cell {
-        display: block;
-    }
-}
-
-.row .cell {
-    font-family: Poppins-Regular;
-    font-size: 15px;
-    color: #666666;
-    line-height: 1.2;
-    font-weight: unset !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.row.header .cell {
-    font-family: Poppins-Regular;
-    font-size: 18px;
-    color: #fff;
-    line-height: 1.2;
-    font-weight: unset !important;
-    padding-top: 19px;
-    padding-bottom: 19px;
-}
-
-.row .cell:nth-child(1) {
-    width: 360px;
-    padding-left: 40px;
-}
-
-.row .cell:nth-child(2) {
-    width: 160px;
-}
-
-.row .cell:nth-child(3) {
-    width: 250px;
-}
-
-.row .cell:nth-child(4) {
-    width: 190px;
-}
-
-.table,
-.row {
-    width: 100% !important;
-}
-
-.row:hover {
-    background-color: #ececff;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .row {
-        border-bottom: 1px solid #f2f2f2;
-        padding-bottom: 18px;
-        padding-top: 30px;
-        padding-right: 15px;
-        margin: 0;
-    }
-    .row .cell {
-        border: none;
-        padding-left: 30px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-    .row .cell:nth-child(1) {
-        padding-left: 30px;
-    }
-    .row .cell {
-        font-family: Poppins-Regular;
-        font-size: 18px;
-        color: #555555;
-        line-height: 1.2;
-        font-weight: unset !important;
-    }
-    .table,
-    .row,
-    .cell {
-        width: 100% !important;
-    }
+.pro-container{
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
