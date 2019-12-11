@@ -47,22 +47,20 @@ body{
 	 width: 100%;
 	 padding: 0;
 	 transition: background 400ms;
-	 font-family: JosefinSans-Bold;
-	 font-size: 50px;
-	 src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
  .head-nav li a {
 	 display: flex;
 	 padding-top: 2vh;
 	 padding-bottom: 2vh;
-	 font-family: JosefinSans-Bold;
-	 font-size: 40px;
-	 src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
-.head-nav li a span{
+.head-nav li a span {
+	display: flex;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
 	font-family: JosefinSans-Bold;
 	font-size: 40px;
 	src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
+
 }
 .head-nav li a img{
     width:50px;
@@ -173,11 +171,12 @@ body{
 }
 .wrap-all-the-things p{
 
-   
+    font-family: JosefinSans-Bold;
+    font-size: 50px;
     color: black;
     opacity: 1;
     z-index: 1;
-   
+    src: url('../fonts/ubuntu/JosefinSans-Bold.ttf');
 }
  @media screen and (max: 480px) {
 	 .wrap-all-the-things {
@@ -189,11 +188,9 @@ body{
 }
 
 .pro-container{
-	margin-bottom: 320px !important;
+	height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+    flex-direction: column;
 }
