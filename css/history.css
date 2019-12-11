@@ -15,11 +15,7 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+
 
 body,
 html {
@@ -58,9 +54,6 @@ h6 {
     margin: 0px;
 }
 
-p {
-    margin: 0px;
-}
 
 ul,
 li {
@@ -114,6 +107,7 @@ iframe {
 }
 
 .container-table100 {
+    padding-top: 150px;
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
