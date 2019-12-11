@@ -74,7 +74,7 @@
                 <img class="item-img" src="assets/food/bread/donut.png" height="127" width="50" alt="">
                 <div class="bottom-gallery-link">
                     <p class="price">$0.59</p>
-                    <button class="form-btn" name="donut" value=".59"> <img class="" src="assets/add-to-cart.png"
+                    <button class="form-btn" name="donut" value="0.59"> <img class="" src="assets/add-to-cart.png"
                             alt=""></button>
                 </div>
             </li>
@@ -85,7 +85,7 @@
                 <img class="item-img" height="127" src="assets/food/bread/croissant.png" alt="">
                 <div class="bottom-gallery-link">
                     <p class="price">$0.99</p>
-                    <button class="form-btn" name="croissant"  value=".99"> <img class="" src="assets/add-to-cart.png"
+                    <button class="form-btn" name="croissant"  value="0.99"> <img class="" src="assets/add-to-cart.png"
                             alt=""></button>
                 </div>
             </li>
@@ -96,7 +96,7 @@
                 <img class="item-img" height="127" src="assets/food/bread/wheat.png" alt="">
                 <div class="bottom-gallery-link">
                     <p class="price">$0.99</p>
-                    <button class="form-btn" name="wheat" value=".99"> <img class="" src="assets/add-to-cart.png"
+                    <button class="form-btn" name="wheat" value="0.99"> <img class="" src="assets/add-to-cart.png"
                             alt=""></button>
                 </div>
             </li>
